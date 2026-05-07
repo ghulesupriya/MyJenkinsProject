@@ -24,13 +24,6 @@ pipeline {
                 sh 'docker images'
             }
         }
-        stage('container') {
-            steps {
-                echo 'I am in Container phase'
-                echo 'creating container'
-                sh 'docker run -d -p 80:80 nginx'
-                echo 'container created'
-            }
-        }
+
     }
 }
